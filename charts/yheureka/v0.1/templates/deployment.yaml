@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ include "demo.fullname" . }}
+  name: {{ include "yheureka.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "demo.name" . }}
-    helm.sh/chart: {{ include "demo.chart" . }}
+    app.kubernetes.io/name: {{ include "yheureka.name" . }}
+    helm.sh/chart: {{ include "yheureka.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "demo.name" . }}
+      app.kubernetes.io/name: {{ include "yheureka.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "demo.name" . }}
+        app.kubernetes.io/name: {{ include "yheureka.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
