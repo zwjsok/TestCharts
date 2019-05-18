@@ -1,5 +1,5 @@
 dependencies:
   - name: yheureka
     version: 0.1
-    repository: file://../../yheureka/v0.1
+    repository: "file://../../yheureka/v0.1"
     condition: yheureka.enabled
