@@ -1,0 +1,5 @@
+dependencies:
+  - name: yheureka
+    version: 0.1
+    repository: https://github.com/zwjsok/TestCharts.git
+    condition: yheureka.enabled
