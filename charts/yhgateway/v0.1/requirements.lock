@@ -1,0 +1,6 @@
+dependencies:
+- name: yheureka
+  repository: file://../../yheureka/v0.1
+  version: "0.1"
+digest: sha256:785cbabd1d9cb666150cd21fd867ccfcbb6bbefdf101787e444b0e850106f24a
+generated: 2019-05-20T14:16:42.3206689+08:00
