@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 192.168.101.101:6000/yheureka
+  repository: 192.168.101.101:6000/yhservice/yheureka
   tag: latest
   pullPolicy: Always
 
