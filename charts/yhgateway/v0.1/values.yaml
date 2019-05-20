@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: 192.168.101.101:6000/yhservice/yhgateway
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
