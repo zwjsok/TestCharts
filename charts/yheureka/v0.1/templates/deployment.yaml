@@ -24,9 +24,22 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
+            - name: yheureka
               containerPort: 5000
-              protocol: TCP
+            livenessProbe:
+              exec:
+                command:
+                - yheureka
+                - --eval
+                - "db.adminCommand('ping')"
+{{ toYaml .Values.livenessProbe | indent 10 }}
+            readinessProbe:
+              exec:
+                command:
+                - yheureka
+                - --eval
+                - "db.adminCommand('ping')"
+{{ toYaml .Values.readinessProbe | indent 10 }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
