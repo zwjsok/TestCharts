@@ -6,8 +6,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.101.101:6000/yhservice/yheureka
-  tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
