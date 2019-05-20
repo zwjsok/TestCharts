@@ -27,9 +27,8 @@ spec:
             - name: http
               containerPort: 2019
               protocol: TCP
-            httpGet:
-              path: /
-              port: http
+          livenessProbe: null
+          readinessProbe: null
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

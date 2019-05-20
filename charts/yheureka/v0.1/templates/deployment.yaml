@@ -27,6 +27,8 @@ spec:
             - name: http
               containerPort: 5000
               protocol: TCP
+          livenessProbe: null
+          readinessProbe: null
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
